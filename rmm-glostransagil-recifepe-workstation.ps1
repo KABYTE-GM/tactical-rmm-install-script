@@ -4,10 +4,10 @@ $api = '"https://tapi.kabyte.com.br"'
 $clientid = '45'
 $siteid = '47'
 $agenttype = '"workstation"'
-$power = 0
-$rdp = 0
-$ping = 0
-$auth = '"db44dc2842150717bc17b4b1e30eaa90ab9b1688b271efba0faa36ab044a91b4"'
+$power = 1
+$rdp = 1
+$ping = 1
+$auth = '"b31fc41c092be0bc22736cd6d4a117b538fe14d76f16f7ba3e1393d28cf9d46d"'
 $downloadlink = 'https://github.com/amidaware/rmmagent/releases/download/v2.9.1/tacticalagent-v2.9.1-windows-amd64.exe'
 $apilink = $downloadlink.split('/')
 
