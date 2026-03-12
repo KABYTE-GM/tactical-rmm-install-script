@@ -4,11 +4,12 @@ $api = '"https://tapi.kabyte.com.br"'
 $clientid = '42'
 $siteid = '44'
 $agenttype = '"workstation"'
-$power = 1
-$rdp = 1
-$ping = 1
-$auth = '"ed5a2a0788205362511bf21dd53548d965797451fe2d3fe9a849d5708ddf7bca"'
-$downloadlink = 'https://github.com/amidaware/rmmagent/releases/download/2.10.0/tacticalagent-v2.10.0-windows-amd64.exe'$apilink = $downloadlink.split('/')
+$power = 0
+$rdp = 0
+$ping = 0
+$auth = '"d130ad3a3463d16fc929861dcdc8c25d3802cf9f5695214bd9414576b5ad5f6b"'
+$downloadlink = 'https://github.com/amidaware/rmmagent/releases/download/v2.10.0/tacticalagent-v2.10.0-windows-amd64.exe'
+$apilink = $downloadlink.split('/')
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
