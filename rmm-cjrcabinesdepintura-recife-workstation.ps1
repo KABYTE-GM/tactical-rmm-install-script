@@ -1,5 +1,5 @@
 # author: https://github.com/bradhawkins85
-$innosetup = 'tacticalagent-v2.9.1-windows-amd64.exe'
+$innosetup = 'tacticalagent-v2.10.0-windows-amd64.exe'
 $api = '"https://tapi.kabyte.com.br"'
 $clientid = '42'
 $siteid = '44'
@@ -8,8 +8,7 @@ $power = 1
 $rdp = 1
 $ping = 1
 $auth = '"ed5a2a0788205362511bf21dd53548d965797451fe2d3fe9a849d5708ddf7bca"'
-$downloadlink = 'https://github.com/amidaware/rmmagent/releases/download/v2.9.1/tacticalagent-v2.9.1-windows-amd64.exe'
-$apilink = $downloadlink.split('/')
+$downloadlink = 'https://github.com/amidaware/rmmagent/releases/download/2.10.0/tacticalagent-v2.10.0-windows-amd64.exe'$apilink = $downloadlink.split('/')
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
