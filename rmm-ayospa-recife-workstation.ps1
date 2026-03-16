@@ -7,7 +7,7 @@ $agenttype = '"workstation"'
 $power = 1
 $rdp = 1
 $ping = 1
-$auth = '"cbfd3ea9c09ec3170c2f2aa6a85166e10c2ce52cf041b6816419224d03cd262a"'
+$auth = '"65ccabff95eeb965eae9002bc5680de4fb0903e87880ac8b6904e29dd70015e6"'
 $downloadlink = 'https://github.com/amidaware/rmmagent/releases/download/v2.10.0/tacticalagent-v2.10.0-windows-amd64.exe'
 $apilink = $downloadlink.split('/')
 
