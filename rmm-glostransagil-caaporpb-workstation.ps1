@@ -1,5 +1,5 @@
 # author: https://github.com/bradhawkins85
-$innosetup = 'tacticalagent-v2.10.0-windows-amd64.exe'
+$innosetup = 'tacticalagent-v2.11.0-windows-amd64.exe'
 $api = '"https://tapi.kabyte.com.br"'
 $clientid = '45'
 $siteid = '55'
@@ -7,8 +7,8 @@ $agenttype = '"workstation"'
 $power = 1
 $rdp = 1
 $ping = 1
-$auth = '"8171b69176683048e79ead25487e89c11eadfc2b29ed61c2b16270203914571a"'
-$downloadlink = 'https://github.com/amidaware/rmmagent/releases/download/v2.10.0/tacticalagent-v2.10.0-windows-amd64.exe'
+$auth = '"30f08d4f22df637895d1e5a558bc4c4a4c5213537ee5114c0db8735eb95b16a9"'
+$downloadlink = 'https://github.com/amidaware/rmmagent/releases/download/v2.11.0/tacticalagent-v2.11.0-windows-amd64.exe'
 $apilink = $downloadlink.split('/')
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -41,6 +41,7 @@ If (Get-Service $serviceName -ErrorAction SilentlyContinue) {
             Add-MpPreference -ExclusionPath 'C:\Program Files\TacticalAgent\*'
             Add-MpPreference -ExclusionPath 'C:\Program Files\Mesh Agent\*'
             Add-MpPreference -ExclusionPath 'C:\ProgramData\TacticalRMM\*'
+            Add-MpPreference -ExclusionProcess 'C:\Windows\Temp\is-*.tmp\tacticalagent*'
         }
     }
     Catch {
@@ -60,7 +61,7 @@ If (Get-Service $serviceName -ErrorAction SilentlyContinue) {
             Invoke-WebRequest -Uri $downloadlink -OutFile $OutPath\$output
             Start-Process -FilePath $OutPath\$output -ArgumentList ('/VERYSILENT /SUPPRESSMSGBOXES') -Wait
             write-host ('Extracting...')
-            Start-Sleep -s 5
+            Start-Sleep -s 7
             Start-Process -FilePath "C:\Program Files\TacticalAgent\tacticalrmm.exe" -ArgumentList $installArgs -Wait
             exit 0
         }
